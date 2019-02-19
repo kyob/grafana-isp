@@ -1,0 +1,16 @@
+# DCN config
+
+ssh_username = "admin"
+ssh_password = "password"
+ssh_port     = 22
+ssh_command  = "show mac-address-table count | include Total"
+
+influxdb_host = "192.168.0.10"
+influxdb_db   = "macs"
+influxdb_port = 8086
+
+hosts = [
+	"10.0.0.2",
+	"10.0.0.3"
+	]
+
