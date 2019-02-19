@@ -1,5 +1,5 @@
 # Ignore production config with sensitive data
-config.py
+*config.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
