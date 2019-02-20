@@ -1,0 +1,27 @@
+# Example NEXUS config
+
+# domyslnie skrypt wyswietli wyniki  (zmien na 0, jesli ma zapisywac do bazy)
+debug	= 1
+
+# Switche Nexus
+ssh_user	= "user"
+ssh_password	= "pass"
+ssh_port	= 22
+
+nexus_command_macs		= "show mac address-table count dynamic"
+nexus_command_multicast_macs	= "show mac address-table multicast | count"
+nexus_command_control_plane_arp_drop	= "show policy-map interface control-plane class copp-s-arp | grep Drop"
+nexus_command_control_plane_arp_out	= "show policy-map interface control-plane class copp-s-arp | grep Out"
+nexus_command_control_plane_arp_police	= "show policy-map interface control-plane class copp-s-arp | grep pps"
+
+nexus_command_enviroment_power_input	= "show environment power input | json \n"
+
+influxdb_host 		= "192.168.0.20"
+influxdb_db		= "nexus"
+influxdb_port		= 8086
+
+hosts =  [
+	"10.0.0.2",
+	"10.0.0.5
+	]
+
