@@ -1,3 +1,5 @@
+![Przykładowy wykres Grafana](grafana-nexus.png)
+
 # Co robi skrypt nexus-control-plane-arp-and-macs.py ?
 Odczytuje ze switcha informacje o:
 * ilości wszystkich MAC
