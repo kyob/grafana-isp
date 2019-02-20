@@ -1,0 +1,18 @@
+# Example LMS config
+
+# domyslnie skrypt wyswietli wyniki  (zmien na 0, jesli ma zapisywac do bazy)
+debug_klienci	= 1
+debug_taryfy	= 1
+
+# parametry do bazy LMS dobrze jest utworzyc osobnego uzytkownika z selectem dla tabeli customers,assignments,tariffs
+mysql_host	= "192.168.0.10"
+mysql_user	= "user"
+mysql_password	= "pass"
+mysql_database	= "lms"
+mysql_query_klienci	= "SELECT COUNT(CASE WHEN `deleted` = 0 THEN 1 END) AS KLIENCI_AKTYWNI, COUNT(CASE WHEN `deleted` = 1 THEN 1 END) AS KLIENCI_USUNIECI, COUNT(id) AS KLIENCI_SUMA FROM customers"
+mysql_query_taryfy	= "SELECT COUNT(a.id) AS ile, t.name FROM assignments a LEFT JOIN tariffs t ON a.tariffid=t.id WHERE t.name IS NOT NULL AND UNIX_TIMESTAMP() BETWEEN a.datefrom AND a.dateto GROUP BY t.name ORDER BY ile DESC"
+
+influxdb_host 		= "192.168.0.20"
+influxdb_db_klienci	= "lms_klienci"
+influxdb_db_taryfy	= "lms_taryfy"
+influxdb_port		= 8086
