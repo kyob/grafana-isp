@@ -13,7 +13,7 @@ Odczytuje jaki jest pobór mocy, napięcie oraz natężenie prądu.
 https://github.com/kyob/
 
 # InfluxDB przydatne polecenia
-curl -G 'http://localhost:8086/query?db=macs' --data-urlencode 'q=SELECT * FROM "moja_baza"'
-curl -i -XPOST http://localhost:8086/query --data-urlencode "q=CREATE DATABASE moja_baza"
-curl -i -XPOST http://localhost:8086/query --data-urlencode "q=DRP DATABASE moja_baza"
+* curl -G 'http://localhost:8086/query?db=macs' --data-urlencode 'q=SELECT * FROM "moja_baza"'
+* curl -i -XPOST http://localhost:8086/query --data-urlencode "q=CREATE DATABASE moja_baza"
+* curl -i -XPOST http://localhost:8086/query --data-urlencode "q=DRP DATABASE moja_baza"
 
