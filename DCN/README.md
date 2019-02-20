@@ -1,7 +1,7 @@
-![Przykładowy wykres](grafana-dcn-macs.png)
+![Przykładowy wykres Grafana](grafana-dcn-macs.png)
 
 ## Co to robi?
-Pobiera ilość wszystkich MAC ze swichy DCN S5750E-16X-SI. Następnie zapisuje je do bazy InfluxDB.
+Pobiera ilość wszystkich MAC ze swichy DCN S5750E-16X-SI. Następnie zapisuje je do bazy InfluxDB. Otrzymane wyniki można zwizualizować za pomocą grafany.
 
 ## Jak uruchomić?
 * cp config.py.default config.py
