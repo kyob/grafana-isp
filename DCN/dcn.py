@@ -48,9 +48,12 @@ def connect_to_host(host):
       }
       }
     ]
-    print(influxdb_data)
-    #dbClient = InfluxDBClient(host=config.influxdb_host, port=config.influxdb_port, database=config_influxdb_db)
-    #dbClient.write_points(influxdb_data)
+
+    if config.debug == 1:
+	print(influxdb_data)
+    else:
+	dbClient = InfluxDBClient(host=config.influxdb_host, port=config.influxdb_port, database=config_influxdb_db)
+	dbClient.write_points(influxdb_data)
     ssh.close()
 
 for host in config.hosts:

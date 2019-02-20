@@ -1,5 +1,8 @@
 # DCN config
 
+# disable debug change to 0
+debug = 1
+
 ssh_username = "admin"
 ssh_password = "password"
 ssh_port     = 22
